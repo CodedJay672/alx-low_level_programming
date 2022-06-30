@@ -1,0 +1,2 @@
+#!/bin/bang
+gcc -E -c -o comp
