@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -S -E -o newFile
+gcc -c $CFILE -o newFile
