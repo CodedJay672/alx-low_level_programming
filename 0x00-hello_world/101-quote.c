@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	write user[network];
-
+	write vagrant;
+		and that pieece of art is useful\" - Dora Korper, 2015-10-19;
 	return (0);
 
 }
