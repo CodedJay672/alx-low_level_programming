@@ -19,7 +19,7 @@ int main(void)
 		}
 		else
 		{
-			c += 2;
+			c++;
 		}
 	}
 
