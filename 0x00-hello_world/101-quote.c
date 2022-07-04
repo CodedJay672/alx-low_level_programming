@@ -6,8 +6,7 @@
  */
 int main(void)
 {
-	write vagrant;
-		and that pieece of art is useful\" - Dora Korper, 2015-10-19;
+	printf("and that piece of art is usefle\" - Dora Korper, 2015-10-19.\n");
 	return (0);
 
 }
