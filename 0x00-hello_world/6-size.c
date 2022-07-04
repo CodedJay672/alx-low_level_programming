@@ -10,7 +10,7 @@ int main(void)
 
 	for (int i = 0; i <= 5; i++)
 	{
-		printf("%s: %u\n", variableName[i], (unsigned int)(sizeof(variableName[i])));
+		printf("size of a %s: %d\n", variableName[i], (unsigned int)(sizeof(variableName[i])));
 	}
 
 	return (0);
