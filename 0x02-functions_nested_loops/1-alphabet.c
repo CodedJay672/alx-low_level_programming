@@ -1,13 +1,18 @@
 #include"main.h"
 
 /**
- * main - Entry point
- *
- * Return: - Always 0 (success)
+ * function - prints characters to stdout
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int c = 97;
+
+	while (c <= 122)
+	{
+		_putchar(c);
+		c++;
+	}
+
+	_putchar(10);
 }
