@@ -1,7 +1,9 @@
 #include"main.h"
 
 /**
- * function - prints characters to stdout
+ * print_alphabet - writes character values to stdout
+ *
+ * @c - character to write
  */
 
 void print_alphabet(void)
