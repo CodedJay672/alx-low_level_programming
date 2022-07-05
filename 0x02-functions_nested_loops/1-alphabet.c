@@ -3,6 +3,8 @@
 /**
  * main - Entry point
  *
+ * print_alphabet: - prints characters to stdout
+ *
  * Return: - Always 0 (success)
  */
 
@@ -19,7 +21,6 @@ void print_alphabet(void)
 	_putchar(10);
 }
 
-		
 int main(void)
 {
 	print_alphabet();
