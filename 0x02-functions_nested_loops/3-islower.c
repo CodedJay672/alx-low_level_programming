@@ -2,6 +2,7 @@
 
 /**
  * _islower - returns an integer
+ * @c: - integer argument accepted by function
  *
  * Return: - reaturns 1 if true, otherwise returns 0
  */
