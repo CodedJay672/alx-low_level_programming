@@ -2,9 +2,9 @@
 
 /**
  * print_sign - prints the sign of the given argument
- * @n - argument to check for signs
+ * @n: - integer argument for function
  *
- * Return: returns 0 if n is 0, returns 1 if n is positive and returns -1 if n is less than zero
+ * Return: returns a integer if arguments are positive, negative or zero
  */
 
 int print_sign(int n)
