@@ -6,5 +6,5 @@
  * main: - Always 0 (success)
  */
 
-int _putchar (char);
-
+int _putchar(char);
+void print_alphabet(void);
