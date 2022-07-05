@@ -6,7 +6,7 @@
  * Return: - Always 0 (success)
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	int c = 97;
 
@@ -17,5 +17,11 @@ int main(void)
 	}
 
 	_putchar(10);
+}
+
+		
+int main(void)
+{
+	print_alphabet();
 	return (0);
 }
