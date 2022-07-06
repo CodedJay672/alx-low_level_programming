@@ -8,9 +8,18 @@
 
 int main(void)
 {
-	int r;
+	int n = 1;
+	int s;
 
-	r = sum();
-	printf("%d\n", r);
+	while (n < 1024)
+	{
+		if ((n % 3 == 0) || (n % 5 == 0))
+		{
+			s = s + n;
+		}
+		n++;
+	}
+
+	printf("%d\n", s);
 	return (0);
 }
