@@ -13,6 +13,7 @@ void more_numbers(void)
 	while (a < 10)
 	{
 		int b = 48;
+
 		while (b <= 57)
 		{
 			_putchar(b);
