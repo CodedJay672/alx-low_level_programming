@@ -12,7 +12,7 @@ void print_triangle(int size)
 	if (size > 0)
 	{
 		int i = 1;
-		
+
 		while (i <= size)
 		{
 			int j = size;
