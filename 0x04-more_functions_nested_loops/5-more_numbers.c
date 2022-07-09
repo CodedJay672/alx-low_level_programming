@@ -12,12 +12,19 @@ void more_numbers(void)
 
 	while (a < 10)
 	{
-		int b = 48;
+		int b = 0;
+		int c = 0;
 
-		while (b <= 57)
+		while (b <= 9)
 		{
-			_putchar(b);
+			_putchar(b + '0');
 			b++;
+		}
+		while (c <= 4)
+		{
+			_putchar('1');
+			_putchar(c + '0');
+			c++;
 		}
 		_putchar('\n');
 		a++;
