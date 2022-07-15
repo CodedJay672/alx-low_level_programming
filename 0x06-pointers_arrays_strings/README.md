@@ -1,3 +1,3 @@
 WELCOME!!!!
 
-This repository containsmore C program files implementing POINTERS, ARRAYS and STRINGS
+This repository contains more C program files implementing POINTERS, ARRAYS and STRINGS
