@@ -8,16 +8,17 @@
 
 int main(void)
 {
-	int c = 48;
+	int c = 0;
 
-	while (c <= 57)
+	while (c <= 9)
 	{
-		putchar(c);
+		putchar((c % 10) + '0');
+		if (c == 9)
+			break;
 		putchar(',');
 		putchar(' ');
 		c++;
 	}
-
 	putchar('\n');
 	return (0);
 }
