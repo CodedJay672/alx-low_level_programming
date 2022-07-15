@@ -8,21 +8,43 @@
 
 int main(void)
 {
-	long a = 1;
-	long b = 2;
-	long c;
-	int counter = 1;
+	int count;
+	unsigned long a, b, c;
+	unsigned long m, n, p, q;
 
-	printf("%ld, %ld", a, b);
-	while (counter <= 98)
+	count = 1;
+	a = 0;
+	b = 1;
+	while (count <= 91)
 	{
-		c = b + a;
-		printf(", %ld", c);
+		c = a + b;
 		a = b;
 		b = c;
-		counter++;
+			printf("%lu, ", c);
+		count++;
 	}
-	printf("\n");
+	m = a % 1000;
+	a = a / 1000;
+	n = b / 1000;
+	b = b / 1000;
+	while (count <= 98)
+	{
+		q = (m + n) / 1000;
+		p = (m + n) - q  * 1000;
+		c = (a + b) + q;
+		m = n;
+		n = p;
+		a = b;
+		b = c;
+		if (p >= 100)
+			printf("%lu%lu", c, p);
+		else
+			printf("%lu0%lu", c, p);
+		if (count != 98)
+			printf(", ");
+		count++;
+	}
+	putchar('\n');
 	return (0);
 }
 

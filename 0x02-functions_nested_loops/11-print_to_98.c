@@ -1,37 +1,23 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * print_to_98 - function that prins numbers to 98
  * @n: - integer argument to mark the start count value
+ * Return: 0 or 1
  */
 
 void print_to_98(int n)
 {
-	int a = 0;
-
-	if (n > 98)
+	while (n < 98)
 	{
-		printf("%d", a);
-		while (n >= 98)
-		{
-			printf(", %d", n);
-			n--;
-		}
-		printf("\n");
+		printf("%i, ", n);
+		n++;
 	}
-	else if (n < 98)
+	while (n > 98)
 	{
-		printf("%d", a);
-		while (n <= 98)
-		{
-			printf(", %d", n);
-			n++;
-		}
-		printf("\n");
+		printf("%i, ", n);
+		n--;
 	}
-	else
-	{
-		printf("%d\n", n);
-	}
+	printf("98");
+	putchar('\n');
 }
