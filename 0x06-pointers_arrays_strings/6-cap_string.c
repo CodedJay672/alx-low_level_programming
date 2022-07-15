@@ -14,9 +14,9 @@ char *cap_string(char *s)
 	int b;
 
 	a = 0;
-	b = 0;
 	while (s[a])
 	{
+		b = 0;
 		if ('a' <= s[a] && s[a] <= 'z')
 		{
 			if (a)
