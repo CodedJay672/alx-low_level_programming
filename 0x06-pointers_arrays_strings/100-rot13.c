@@ -19,5 +19,5 @@ char *rot13(char *s)
 			*i = (*i - shift + 13) % 26 + shift;
 		i++;
 	}
-	return(s);
+	return (s);
 }
