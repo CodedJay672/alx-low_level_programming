@@ -10,27 +10,27 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int pos;
+	unsigned int pos = 0;
+	int a = 0;
 
-	while (*accept)
+	while (accept[a] != 0)
 	{
 		int b = 0;
 
-		while (*s)
+		while (s[b] != 0)
 		{
-			if (s[b] == *accept)
+			if (accept[a] == s[b])
 			{
 				if (pos < b)
 				{
-					pos = b + 1;
-					break;
+					pos = b;
 				}
+				break;
 			}
 			b++;
-			s++;
 		}
-		accept++;
+		a++;
 	}
-	return (pos);
+	return (pos + 1);
 }
 
