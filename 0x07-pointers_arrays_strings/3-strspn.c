@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (accept[a] == s[b])
 			{
-				if (pos < b)
+				if (pos < (unsigned int) b)
 				{
 					pos = b;
 				}
