@@ -13,11 +13,11 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int pos = 0;
 	int a = 0, b;
 
-	while (s[a])
+	while (accept[a])
 	{
 		b = 0;
 
-		while (accept[b])
+		while (s[b] != 32)
 		{
 			if (s[a] == accept[b])
 			{
