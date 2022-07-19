@@ -10,8 +10,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int pos = 0;
-	unsigned int a = 0, b;
+	unsigned int a = 0, b, t = 0;
 
 	while (accept[a])
 	{
@@ -21,12 +20,11 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (sccept[a] == s[b])
 			{
-				pos++;
-				return (pos);
+				t++;
 			}
 			b++;
 		}
 		a++;
 	}
-	return (pos);
+	return (t);
 }
