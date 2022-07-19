@@ -22,6 +22,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (sccept[a] == s[b])
 			{
 				pos++;
+				return (pos);
 			}
 			b++;
 		}
