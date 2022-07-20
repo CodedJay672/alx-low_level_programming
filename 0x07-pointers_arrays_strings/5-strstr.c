@@ -11,32 +11,23 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int strLen, subLen = 0;
-	int end, subFound, i, j;
+	int a, b = 0;
 
-	while (haystack[strLen])
-		strLen++;
-	while (needle[subLen])
-		subLen++;
-	i = 0;
-	while (i < strLen)
+	while (haystack[a])
 	{
-		subFound = 1;
-		j = 0;
-		while (j < subLen)
+		while (needle[b])
 		{
-			if  (needle[j] != haystack[i + j])
+			if (haystack[a + b] != needle[b])
 			{
-				subFound = 0;
 				break;
 			}
-			j++;
+			b++;
 		}
-		if (subFound)
+		if (needle[b] == NULL)
 		{
-			return (haystack + i);
+			return (haystack + a);
 		}
-		i++;
+		a++;
 	}
 	return (NULL);
 }
