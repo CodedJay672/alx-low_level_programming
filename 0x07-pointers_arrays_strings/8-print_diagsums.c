@@ -11,21 +11,13 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i = 0, j = 0, c1, c2;
+	int i = 0, c1 = 0, c2 = 0;
 
-	while (i < size && j < size)
+	while (i < size)
 	{
-		c1 += a[i][j];
+		c1 += a[(size + 1) * i];
+		c2 += a[(size - 1) * (i + 1)];
 		i++;
-		j++;
-	}
-	i = 0;
-	j = size - 1;
-	while (size > i && j != 0)
-	{
-		c2 += a[i][j];
-		i++;
-		j--;
 	}
 	printf("%i, %i", c1, c2);
 }
