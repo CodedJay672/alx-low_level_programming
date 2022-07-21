@@ -13,7 +13,7 @@ int is_palindrome(char *s)
 }
 
 /**
- * strlen - finds the length of a string
+ * _strlen - finds the length of a string
  * @s: string argument
  * Return: returns the length of the string
  */
@@ -41,5 +41,5 @@ int _is_palindrome(char *s, int r, int l)
 		return (1);
 	if (s[l] == s[r])
 		return (_is_palindrome(s, r + 1, l - 1));
-	return 0;
+	return (0);
 }
