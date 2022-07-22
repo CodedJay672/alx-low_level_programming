@@ -3,8 +3,10 @@
 A library is a collection of code routines (functions, classes, variables and so on) that can be called when building a program instead of writing it ourselves.
 
 Two types are:
+
 	**Static libraries**
-	**Shared (or Dynamic) libraries
+
+	**Shared (or Dynamic) libraries**
 
 **_STATIC LIBRARIES_**
 
