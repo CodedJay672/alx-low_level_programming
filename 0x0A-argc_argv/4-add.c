@@ -16,18 +16,20 @@ int main(int argc, char *argv[])
 	if (argc <= 1)
 	{
 		printf("%d\n", sum);
-		return (0);
 	}
-	while (i < argc)
+	else
 	{
-		if (!atoi(argv[i]))
+		while (i < argc)
 		{
-			printf("Error\n");
-			return (1);
+			if (!atoi(argv[i]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			sum += atoi(argv[i]);
+			i++;
 		}
-		sum += atoi(argv[i]);
-		i++;
+		printf("%d\n", sum);
 	}
-	printf("%d\n", sum);
 	return (0);
 }
