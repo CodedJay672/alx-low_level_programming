@@ -30,8 +30,7 @@ int _strlen(char *s)
  * @str1: first string
  * @str2: second string
  * @s1_strt: s1 start value
- * @s2_len: s2 start value
- * @str1_len: length of str 1
+ * @s2_strt: s2 start value
  * @str2_len: length of str 2
  * Return: 1 if strings match else 0
  */
