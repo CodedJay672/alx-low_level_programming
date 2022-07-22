@@ -14,14 +14,14 @@
 int main(int argc, char *argv[])
 {
 	int i = 1;
-	int product = 0;
+	int product = 1;
 
 	if (argc <= 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	product = atoi(argv[i]) * atoi(argv[i + 1]);
+	product *= atoi(argv[i]);
 	printf("%d\n", product);
 	return (0);
 }
