@@ -21,6 +21,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+	if (argc == 2)
+	{
+		product = atoi(argv[i]);
+		printf("%d\n", product);
+		return (0);
+	}
 	product = atoi(argv[i]) * atoi(argv[i + 1]);
 	printf("%d\n", product);
 	return (0);
