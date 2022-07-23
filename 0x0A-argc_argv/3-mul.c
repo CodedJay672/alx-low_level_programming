@@ -21,11 +21,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	while (argv[i])
-	{
-		product *= atoi(argv[i]);
-		i++;
-	}
+	product = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", product);
 	return (0);
 }
