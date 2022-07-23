@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 		i++;
 	}
 
-	k = 1
+	k = 1;
 	while (k < argc)
 	{
 		num = atoi(argv[k]);
