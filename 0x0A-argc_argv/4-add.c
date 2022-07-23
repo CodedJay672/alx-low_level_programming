@@ -12,22 +12,30 @@
 int main(int argc, char *argv[])
 {
 	int result = 0, num, i, j, k;
-
-	for (i = 1; i < argc; i++)
+	
+	i = 1;
+	while (i < argc)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		j = 0;
+
+		while (argv[i][j] != '\0')
 		{
-			for (argv[i][j] > '9' || argv[i][j] < '0')
+			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
 				printf("%s\n", "Error");
 				return (1);
 			}
+			j++;
 		}
+		i++;
 	}
-	for (k = 1; k < argc; k++)
+
+	k = 1
+	while (k < argc)
 	{
 		num = atoi(argv[k]);
 		result += num;
+		k++;
 	}
 	printf("%d\n", result);
 	return (0);
