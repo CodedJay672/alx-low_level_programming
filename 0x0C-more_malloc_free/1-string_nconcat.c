@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * string_mcomcat - concatenates the first string with the
+ * string_nconcat - concatenates the first string with the
  * next n string in the second string
  * @s1: first string argument
  * @s2: second string argument
