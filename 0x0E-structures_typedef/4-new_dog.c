@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
@@ -12,9 +13,9 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog_t *dogs;
+	dog_t *dogs;
 
-	dogs = malloc(sizeof(struct dog_t));
+	dogs = malloc(sizeof(dog_t));
 	if (dogs == NULL)
 		return (NULL);
 	dogs->name = name;
