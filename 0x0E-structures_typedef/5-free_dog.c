@@ -7,7 +7,7 @@
  * @d: pointer dog memory address
  */
 
-void free_dogs(dog_t *d)
+void free_dog(dog_t *d)
 {
 	if (d == NULL)
 	{
