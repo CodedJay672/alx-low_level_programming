@@ -4,7 +4,7 @@
 
 /**
  * print_numbers -< prints numbers given as parameters
- * @seoerator: seperator string
+ * @separator: seperator string
  * @n: number of arguments
  * Return: alwaus 0
  */
@@ -18,8 +18,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	i = 0;
 	while (i < n)
 	{
-		printf("%d, %s\n", va_arg(args, int), separator);
+		printf("%d", va_arg(args, int));
+		if (i == (n - 1))
+			break;
+		printf("%s ", separator);
 		i++;
 	}
+	printf("\n");
 	va_end(args);
 }
