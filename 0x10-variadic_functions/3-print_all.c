@@ -11,7 +11,7 @@
 void print_all(const char * const format, ...)
 {
 	int index;
-	char *str;
+	char *string;
 	char *sep = ", ";
 	va_list args;
 
@@ -22,12 +22,12 @@ void print_all(const char * const format, ...)
 		switch (*(format + index))
 		{
 			case 's':
-				str = va_arg(args, char *);
-				if (str == NULL)
+				string = va_arg(args, char *);
+				if (string == NULL)
 				{
-					str = "(nil)";
+					string = "(nil)";
 				}
-				printf("%s", str);
+				printf("%s", string);
 				break;
 			case 'i':
 				printf("%i", va_arg(args, int));
@@ -46,6 +46,6 @@ void print_all(const char * const format, ...)
 			printf("%s", sep);
 		index++;
 	}
-	putchar('\n');
+	printf("\n");
 	va_end(args);
 }
