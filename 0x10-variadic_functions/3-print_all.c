@@ -42,8 +42,11 @@ void print_all(const char * const format, ...)
 				index++;
 				continue;
 		}
-		if (*(format + index++) != 0)
+		while (*(format +index++) != 0)
+		{
 			printf("%s", sep);
+			break;
+		}
 		index++;
 	}
 	printf("\n");
