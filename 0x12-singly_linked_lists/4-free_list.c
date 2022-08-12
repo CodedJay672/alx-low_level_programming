@@ -15,17 +15,19 @@ void free_list(list_t *head)
 		return;
 	}
 
-	if (temp->next == NULL)
+	if (head->next == NULL)
 	{
-		free(temp);
+		if (head->str == NULL)
+			free(head->str);
+		free(head);
 		return;
 	}
 
 	while (head != NULL)
 	{
-		if (head->str == NULL)
-			free(head->str);
 		temp = head;
+		if (temp->str == NULL)
+			free(temp->str);
 		head = head->next;
 		free(temp);
 	}
