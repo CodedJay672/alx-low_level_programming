@@ -13,12 +13,6 @@ int pop_listint(listint_t **head)
 
 	if ((*head) == NULL)
 		return (0);
-	if ((*head)->next == NULL)
-	{
-		node_data = (*head)->n;
-		(*head) = NULL;
-		return (node_data);
-	}
 	temp = (*head);
 	node_data = temp->n;
 	(*head) = (*head)->next;
