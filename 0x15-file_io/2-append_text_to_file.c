@@ -21,5 +21,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	wp = write(fp, text_content, count++);
 	if (wp == -1)
 		return (-1);
+	close(fp);
 	return (1);
 }
