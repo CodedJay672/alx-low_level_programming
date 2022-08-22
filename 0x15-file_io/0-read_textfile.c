@@ -9,7 +9,7 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char buff[letters];
+	char buff[1024];
 	int fp, rp, wp;
 
 	fp = open(filename, O_RDWR);
@@ -18,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	rp = read(fp, buff, letters);
 	if (rp == -1)
 		return (0);
-	wp = write(1, buff, rp);
+	wp = write(STDOUT_FILENO, buff, rp);
 	if (wp == -1)
 		return (0);
 	return (wp);
