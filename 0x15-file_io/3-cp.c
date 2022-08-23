@@ -49,7 +49,10 @@ int cp(char *src, char *dest)
 		return (-1);
 	fp = open(src, O_RDONLY);
 	if (fp == -1)
-		return (-1);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
+		exit(98);
+	}
 	rp = read(fp, buffer, 1024);
 	if (rp == -1)
 	{
@@ -58,7 +61,10 @@ int cp(char *src, char *dest)
 	}
 	fp2 = open(dest, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (fp == -1)
-		return (-1);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
+		exit(99);
+	}
 	wp = write(fp2, buffer, rp);
 	if (wp == -1)
 	{
