@@ -18,6 +18,16 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+	if (argv[1][0] == '\0')
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from \n");
+		exit(98);
+	}
+	if (argv[2][0] == '\0')
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to \n");
+		exit(99);
+	}
 	cp(argv[1], argv[2]);
 	return (0);
 }
