@@ -59,7 +59,11 @@ int cp(char *src, char *dest)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
-	fp2 = open(dest, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fp2 = open(
+			dest,
+			O_WRONLY | O_CREAT | O_TRUNC,
+			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH
+		);
 	if (fp == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
