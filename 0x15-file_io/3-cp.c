@@ -59,7 +59,7 @@ int cp(char *src, char *dest)
 	cl = close(fp);
 	if (cl == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp);
+		dprintf(STDERR_FILENO, "Error: Can't");
 		exit(100);
 	}
 	fp = open(dest, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
@@ -74,7 +74,7 @@ int cp(char *src, char *dest)
 	cl = close(fp);
 	if (cl == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp);
+		dprintf(STDERR_FILENO, "Error: Can't");
 		exit(100);
 	}
 	return (1);
