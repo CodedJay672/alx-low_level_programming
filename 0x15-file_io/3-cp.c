@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 int cp(char *src, char *dest)
 {
 	char *buffer;
-	int fp, rp, wp, cl;
+	int fp, fp2, rp, wp, cl;
 
 	buffer = (char *)malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
@@ -56,16 +56,10 @@ int cp(char *src, char *dest)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
-	cl = close(fp);
-	if (cl == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
-		exit(100);
-	}
-	fp = open(dest, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fp2 = open(dest, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (fp == -1)
 		return (-1);
-	wp = write(fp, buffer, rp);
+	wp = write(fp2, buffer, rp);
 	if (wp == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
@@ -74,8 +68,14 @@ int cp(char *src, char *dest)
 	cl = close(fp);
 	if (cl == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can'ti close fd FD_VALUE\n");
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fp);
 		exit(100);
 	}
-	return (1);
+	cl = close(fp2);
+	if (cl == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fp2);
+		exit(100);
+	}
+	return (wp);
 }
