@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * inser_dnodeint_at_index - inserts node at given pos
+ * insert_dnodeint_at_index - inserts node at given pos
  * @h: pointer to head of the dll
  * @idx: index position to add node
  * @n: integer data for the new node
