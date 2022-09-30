@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_dlisint -> frees a doubly linked list
+ * free_dlistint -> frees a doubly linked list
  * @head: pointer to the head of the list
  *
  */
@@ -12,12 +12,10 @@ void free_dlistint(dlistint_t *head)
 
 	if (head == NULL)
 		return;
-	while (last_node->next != NULL)
-		last_node = last_node->next;
-	temp = last_node;
-	while (temp != NULL)
+	while (last_node != NULL)
 	{
-		temp = last_node->prev;
-		free(last_node);
+		temp = last_node;
+		last_node = last_node->next;
+		free(temp);
 	}
 }
