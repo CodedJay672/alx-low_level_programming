@@ -28,7 +28,7 @@ size_t min_val(int a, int b)
  *
  * Description: Jump search takes a step (sqrt(n) in this case)
  * and searches linearly when it finds a "block" that is greater
- * than the key. 
+ * than the key.
  *
  * Return: returns index of the value or -1 if value is not found
  */
