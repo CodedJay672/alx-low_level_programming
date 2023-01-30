@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * binary_search -> function that searches using binary
+ * _bin_search -> function that searches using binary
  * search algorithm
  *
  * @array: array to search in (array should be sorted)
@@ -13,7 +13,7 @@
  * -1 if value is not found
  */
 
-int _bin_search(int *array, size_t left,size_t right, int value)
+int _bin_search(int *array, size_t left, size_t right, int value)
 {
 	size_t i;
 
@@ -32,8 +32,7 @@ int _bin_search(int *array, size_t left,size_t right, int value)
 			return (i);
 		if (array[i] > value)
 			return (i - 1);
-		else
-			left = i + 1;
+		left = i + 1;
 	}
 	return (-1);
 }
