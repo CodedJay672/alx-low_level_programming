@@ -13,7 +13,7 @@ int adv_bin_search(int *array, size_t size, int value)
 {
 	size_t mid = size / 2, i;
 
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	printf("Searching in array");
@@ -36,7 +36,7 @@ int adv_bin_search(int *array, size_t size, int value)
 	if (value < array[mid])
 		return (adv_bin_search(array, mid + 1, value));
 	mid++;
-	return (adv_bin_search(array, mid + 1, value));
+	return (adv_bin_search(array + mid, size - mid, value) + mid);
 }
 
 /**
